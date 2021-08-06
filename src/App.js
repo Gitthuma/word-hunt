@@ -1,4 +1,6 @@
+import { cleanup } from '@testing-library/react';
 import axios from 'axios';
+import { useEffect } from 'react';
 import './App.css';
 
 function App() {
@@ -9,6 +11,7 @@ function App() {
   //Add try catch statement to catch any errors
   //Add a log for the error inside the catch function
   //Get the api url using axios
+  //Call dictionary API inside useEffect
   const dictionaryApi = async() => {
 
     try {
@@ -19,12 +22,14 @@ function App() {
       console.log(error);
     }
 
-  }
+  };
+
+  useEffect(() => {
+    dictionaryApi();
+  }, [])
 
   return (
-    <div className="App">
-    
-    </div>
+    <div className="App"></div>
   );
 }
 
