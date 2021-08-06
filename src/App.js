@@ -3,7 +3,10 @@ import './App.css';
 function App() {
 
   //Create a function called dictionaryApi
-  const dictionaryApi
+  //Create an arrow function
+  const dictionaryApi = () => {
+    
+  }
 
   return (
     <div className="App">
