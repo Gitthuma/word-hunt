@@ -1,4 +1,4 @@
-import { cleanup } from '@testing-library/react';
+
 import axios from 'axios';
 import { useEffect } from 'react';
 import './App.css';
@@ -12,12 +12,15 @@ function App() {
   //Add a log for the error inside the catch function
   //Get the api url using axios
   //Call dictionary API inside useEffect
+  //log data
   const dictionaryApi = async() => {
 
     try {
       const data = await axios.get(
         "https://api.dictionaryapi.dev/api/v2/entries/en/plane"
         );
+
+      console.log(data);
     } catch (error) {
       console.log(error);
     }
