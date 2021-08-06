@@ -4,8 +4,9 @@ function App() {
 
   //Create a function called dictionaryApi
   //Create an arrow function
-  const dictionaryApi = () => {
-    
+  //Make the arrow funtion async since we are fetchin an Api
+  const dictionaryApi = async() => {
+
   }
 
   return (
